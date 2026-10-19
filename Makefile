@@ -1,4 +1,5 @@
 PROG=podman
+PREFIX=$(HOME)/opkg
 
 all: $(PROG)
 
@@ -14,7 +15,7 @@ $(PROG): gvproxy
 install: $(PROG)
 	install -d $(DESTDIR)/$(PREFIX)/bin
 	install -m 0755 $(PROG) $(DESTDIR)/$(PREFIX)/bin/$(PROG)
-	install -m 0755 gvproxy $(DESTDIR)/$(PREFIX)/bin/$(PROG)
+	install -m 0755 gvproxy $(DESTDIR)/$(PREFIX)/bin/gvproxy
 
 clean:
 	$(RM) podman-remote-static-linux_amd64.tar.gz
