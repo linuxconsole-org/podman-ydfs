@@ -4,7 +4,7 @@ PREFIX=$(HOME)/opkg
 all: $(PROG)
 
 gvproxy:
-	curl https://github.com/containers/gvisor-tap-vsock/releases/download/v0.9.0/gvproxy-linux-amd64 -o gvproxy
+	wget https://github.com/containers/gvisor-tap-vsock/releases/download/v0.9.0/gvproxy-linux-amd64 -O gvproxy
 	chmod +x gvproxy
 
 $(PROG): gvproxy
